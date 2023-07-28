@@ -26,5 +26,7 @@ func main() {
 	var userAge uint = 20
 	fmt.Printf("%v is %v years old!\n", userName, userAge)
 	// got error with this >>> userAge = -1
+	// in the calculation due to the negative result, a random number will be printed. >>> userAge = userAge - 23
+	// fmt.Printf("userage is %v\n", userAge)
 
 }
