@@ -21,4 +21,10 @@ func main() {
 	// to print type of variables
 	fmt.Printf("conferenceName type is %T and conferenceTicketes is %T and userTicket is %T\n", conferenceName, conferenceTickets, userTicket)
 
+	// we can also assign type to variables when we define it.
+	// in some cases we need for example only positiv number for integer
+	var userAge uint = 20
+	fmt.Printf("%v is %v years old!\n", userName, userAge)
+	// got error with this >>> userAge = -1
+
 }
