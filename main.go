@@ -29,4 +29,8 @@ func main() {
 	// in the calculation due to the negative result, a random number will be printed. >>> userAge = userAge - 23
 	// fmt.Printf("userage is %v\n", userAge)
 
+	// another way to declare a variable
+	userBirthCity := "Tehran"
+	fmt.Println(userBirthCity)
+
 }
