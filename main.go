@@ -43,15 +43,27 @@ func main() {
 	fmt.Printf("Thank you %v %v for booking %v tickets.\n You will receive a confirmation email at %v\n", firstName, lastName, userTicket, email)
 	fmt.Printf("%v tickets remaining for %v\n", remainingTickets, conferenceName)
 
+	// array
 	// [size]variable_type
 	// var bookings = [50]string{"Mori", "Ali", "Sarah"} or empty array but for empty arrays is an alternative way like defining variables:
 	var bookings [50]string
 
-	bookings[0] = "Mori"
-	bookings[1] = firstName + " " + lastName
+	bookings[0] = firstName + " " + lastName
 
 	fmt.Printf("The whole array:%v\n", bookings)
 	fmt.Printf("The first value: %v\n", bookings[0])
 	fmt.Printf("Array type: %T\n", bookings)
 	fmt.Printf("Array length: %v\n", len(bookings))
+
+	// slice
+	// resize when needed
+	//var bookingsSlice []string or
+	bookingsSlice := []string{}
+	bookingsSlice = append(bookingsSlice, firstName+" "+lastName)
+
+	fmt.Printf("The whole slice:%v\n", bookingsSlice)
+	fmt.Printf("The first value: %v\n", bookingsSlice[0])
+	fmt.Printf("slice type: %T\n", bookingsSlice)
+	fmt.Printf("slice length: %v\n", len(bookingsSlice))
+
 }
