@@ -40,7 +40,18 @@ func main() {
 	fmt.Scan(&userTicket)
 	// int cannot be calculated with uint
 	remainingTickets = remainingTickets - userTicket
-
 	fmt.Printf("Thank you %v %v for booking %v tickets.\n You will receive a confirmation email at %v\n", firstName, lastName, userTicket, email)
 	fmt.Printf("%v tickets remaining for %v\n", remainingTickets, conferenceName)
+
+	// [size]variable_type
+	// var bookings = [50]string{"Mori", "Ali", "Sarah"} or empty array but for empty arrays is an alternative way like defining variables:
+	var bookings [50]string
+
+	bookings[0] = "Mori"
+	bookings[1] = firstName + " " + lastName
+
+	fmt.Printf("The whole array:%v\n", bookings)
+	fmt.Printf("The first value: %v\n", bookings[0])
+	fmt.Printf("Array type: %T\n", bookings)
+	fmt.Printf("Array length: %v\n", len(bookings))
 }
