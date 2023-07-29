@@ -7,7 +7,7 @@ func main() {
 	var conferenceName = "Go Conference"
 	// consts are like variable but cant changed!
 	const conferenceTickets = 50
-	var remainingTickets = 30
+	var remainingTickets uint = 30
 	fmt.Println("Welcome to", conferenceName)
 	fmt.Printf("We have total of %v tickets and %v tickets are still available!\n", conferenceTickets, remainingTickets)
 	// to print type of variables
@@ -27,7 +27,7 @@ func main() {
 	var firstName string
 	var lastName string
 	var email string
-	var userTicket int
+	var userTicket uint
 	// ask user for their name
 	fmt.Println("Enter your first name: ")
 	// & is a pointer for memory address of variable
@@ -38,7 +38,9 @@ func main() {
 	fmt.Scan(&email)
 	fmt.Println("Enter number of tickets: ")
 	fmt.Scan(&userTicket)
+	// int cannot be calculated with uint
+	remainingTickets = remainingTickets - userTicket
 
-	fmt.Printf("Thank you %v %v for booking %v tickets.\n You will receive a confirrmation email at %v\n", firstName, lastName, userTicket, email)
-
+	fmt.Printf("Thank you %v %v for booking %v tickets.\n You will receive a confirmation email at %v\n", firstName, lastName, userTicket, email)
+	fmt.Printf("%v tickets remaining for %v\n", remainingTickets, conferenceName)
 }
